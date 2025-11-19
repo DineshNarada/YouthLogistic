@@ -617,6 +617,9 @@ h1 {
     position: relative;
     color: #fff;
 }
+.ph-about-us .ph-au-l-text-box, .ph-stats .ph-sts-s-s-i-0, .contact-info-bar.style-1:after, .ph-header-section .ph-hs-b-s-s-icon, .pg-home .ph-services, .pg-home .ph-header-section, .footer-cta-banner, .page-header-banner .phb-bg, .sidebar-nav {
+    background-color: #231f20;
+}
 .ph-about-us .ph-au-l-tb-vertical-strip {
     font-weight: 700;
     font-size: 12px;
@@ -1199,6 +1202,12 @@ a, .contact-info-bar.style-2 .contact-group .cg-text a, #footer-widget-area .con
     .navbar-header {
         float: left;
     }
+    .navbar {
+        border-radius: 4px;
+    }
+    .navbar-fixed-bottom, .navbar-fixed-top {
+        border-radius: 0;
+    }
     .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
         margin-left: -15px;
     }
@@ -1238,15 +1247,36 @@ a, .contact-info-bar.style-2 .contact-group .cg-text a, #footer-widget-area .con
         float: right !important;
         margin-right: -15px;
     }
-    .navbar>.container .navbar-right, .navbar>.container-fluid .navbar-right {
-        margin-right: 0;
-        margin-top: 7px;
-    }
     .navbar-nav>li {
         float: left;
     }
 }
-
+@media (min-width: 992px) {
+    .navbar>.container .navbar-right:not(:first-child), .navbar>.container-fluid .navbar-right:not(:first-child) {
+        margin-top: 55px;
+    }
+}
+@media (min-width: 768px) {
+    .navbar>.container .navbar-right, .navbar>.container-fluid .navbar-right {
+        margin-right: 0;
+        margin-top: 7px;
+    }
+}
+/*my-design*/
+@media (min-width: 992px) {
+  ul#menu-header-menu {
+    margin-top: 55px;
+  }
+}
+/*if-not-this-design*/
+/*applying-after-building-the-contact-info-bar*/
+/*
+@media (min-width: 992px) {
+    .navbar>.container .navbar-right:not(:first-child), .navbar>.container-fluid .navbar-right:not(:first-child) {
+        margin-top: 55px;
+    }
+}
+*/
 @media (max-width: 991px){
     #site-header {
         background-color: #fff;
@@ -1434,7 +1464,21 @@ a, .contact-info-bar.style-2 .contact-group .cg-text a, #footer-widget-area .con
     #footer-widget-area .contact-info-bar .contact-group {
         max-width: calc(100% / 3);
     }
+    #site-header .navbar-nav>li>a:hover, #site-header .navbar-nav>li>a:focus, #site-header .navbar-nav>.active>a, #site-header .navbar-nav>.active>a:focus, #site-header .navbar-nav>.active>a:hover, #site-header .navbar-nav>.open>a, #site-header .navbar-nav>.open>a, #site-header .navbar-nav>.open>a:focus, #site-header .navbar-nav>.open>a:hover, .ph-services .ph-svs-s-single:hover .ph-svs-s-s-title, .ph-services .ph-svs-s-single:hover .ph-svs-s-s-dscr, #footer-widget-area .contact-group .cg-text a:hover, .ph-services .ph-svs-rm-link:hover, .service-single-box .pc-as-s-s-1:hover .pc-as-s-s-b-t-descr {
+        color: #f75353;
+    }
+}
 
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+    .ph-about-us .ph-au-left {
+        min-width: 520px;
+    }
+    .ph-about-us .ph-au-right {
+        width: calc(100% - 520px);
+    }
 }
 
 @media (max-width: 1199px) {
@@ -1521,6 +1565,7 @@ a, .contact-info-bar.style-2 .contact-group .cg-text a, #footer-widget-area .con
         padding-top: 120px;
         padding-bottom: 97px;
     }
+    
 }
 
 @media (max-width: 1439px) {
