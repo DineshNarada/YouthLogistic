@@ -198,7 +198,9 @@ img {
     border-style: none;
     max-width: 100%;
 }
-
+body {
+    margin: 0;
+}
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
@@ -218,7 +220,10 @@ body {
 body, .ph-services .ph-svs-s-s-dscr, .service-single-box .pc-as-s-s-b-t-descr {
     color: #646464;
 }
-
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
 .body-wrap {
     max-width: 1920px;
     margin: 0 auto;
@@ -244,7 +249,29 @@ body, .ph-services .ph-svs-s-s-dscr, .service-single-box .pc-as-s-s-b-t-descr {
     display: -ms-flexbox;
     display: flex;
 }
-
+.page-loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999999;
+    background-color: #fff;
+}
+.page-loader .pgl-spinner {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+}
+.page-header-banner {
+    position: relative;
+    width: 100%;
+    margin-top: 111px;
+}
 .page-container.pg-home {
     margin-top: 111px;
     padding-top: 0;
@@ -259,11 +286,39 @@ body, .ph-services .ph-svs-s-s-dscr, .service-single-box .pc-as-s-s-b-t-descr {
     padding-top: 65px;
     padding-bottom: 65px;
 }
+.page-header-banner .phb-content {
+    position: relative;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    text-align: center;
+}
+.page-header-banner.phb-sin-blog-post .phb-heading {
+    font-size: 45px;
+}
+.page-header-banner .phb-heading {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 55px;
+    color: #fff;
+}
+.page-header-banner .phb-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
+.bagels-ff-gilroy-bold-alt {
+    font-family: 'Gilroy';
+    font-weight: 700;
+}
 .bagels-pos-relative {
      position: relative; 
 }
-
 .bagels-cover-img {
     position: absolute;
     width: 100%;
@@ -427,16 +482,6 @@ body, .ph-services .ph-svs-s-s-dscr, .service-single-box .pc-as-s-s-b-t-descr {
 h1 {
     margin: .67em 0;
     font-size: 2em;
-}
-h1 {
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
 }
 
 .banner .banner-text-title span, .banner .banner-text-descr span {
@@ -702,7 +747,7 @@ h1 {
 }
 
 
-/*************Blog*************/
+/********************************************************************************Blog*************/
 .ph-blogs .ph-bl-heading:not(:last-child) {
     margin-bottom: 35px;
 }
@@ -793,6 +838,36 @@ h1 {
     -moz-transition: margin .2s ease-in-out;
     transition: margin .2s ease-in-out;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1026,6 +1101,16 @@ ol, ul {
 ol, ul {
     margin-top: 0;
     margin-bottom: 10px;
+}
+.list-inline {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+}
+ul.list-inline {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 .dropdown, .dropup {
     position: relative;
