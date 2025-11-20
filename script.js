@@ -21,6 +21,15 @@ $(document).ready(function(){
             }
         }
     });
+
+    // Sticky header on scroll
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+            $('#site-header').addClass('sticky');
+        } else {
+            $('#site-header').removeClass('sticky');
+        }
+    });
 });
 
 /**
