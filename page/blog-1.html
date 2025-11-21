@@ -3,19 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-        <title>Yuth Logistic - Blog-1</title>
+        <title>Yuth Logistic - Fast, flexible and dependable logistic solutions tailored to your needs </title>
         <link rel="icon" type="png" href="../assets/icon/cropped-favicon-180x180.png" sizes="32x32">
+
         <!--<link rel="stylesheet" href="lib/aos.css">-->
+            
         <link rel="stylesheet" href="../lib/owl.carousel.min.css">
         <link rel="stylesheet" href="../lib/owl.theme.default.min.css">
         <link rel="stylesheet" href="../lib/fontawesome/css/all.min.css">
         <link rel="stylesheet" href="../style.css">
     </head>
-    <body class="wp-singular post-template-default single single-post postid-619 single-format-standard wp-theme-YuthLogistics">
+
+    <body class="home-default" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
         <div class="body-wrap">
+
+            
             <div class="page-loader" style="display: none;">
                 <div class="pgl-spinner"></div>
             </div>
+
             <nav class="navbar navbar-fixed-top navbar-default" id="site-header">
                 <div class="container">
                     <div class="flex-parent bagels-trans-p-2">
@@ -23,10 +29,45 @@
                             <a class="navbar-brand header-logo" href="../index.html">
                                 <img class="bagels-trans-p-2" src="../assets/icon/logo-with-red-line.svg" alt="Yuth Logistics">
                             </a>
+                            <div class="nh-1"> 
+                                <a href="#" data-sidebar="left-sidebar" class="sidebar-toggler header-ham-icon visible-xs visible-sm">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="collapse navbar-collapse" id="main-navbar">
+                            <div class= "contact-info-bar style-1 bagels-trans-p-2">
+                                <div class="cib-1"> <!--fill this later-->  </div>
+                            </div>
+                            <ul id="menu-header-menu" class="nav navbar-nav navbar-right">
+                                <li><a title="Home" href="../index.html">Home </a></li>
+                                <li><a title="Services" href="../sample-page.html">Services </a></li>
+                                <li><a title="About Us" href="../sample-page.html">About Us</a></li>
+                                <li><a title="Blog" href="../page/blog-achieve.html">Blog</a></li>
+                                <li><a title="FAQs" href="../sample-page.html">FAQs</a></li>
+                            <ul>
                         </div>
                     </div>
                 </div>
             </nav>
+
+            <!-- Mobile nav -->
+            <div class="sidebar-nav visible-xs visible-sm" id="left-sidebar">
+                <ul id="menu-mobile-menu" class="nav navbar-nav navbar-right">
+                    <li><a title="Home" href="../index.html">Home</a></li>
+                    <li><a title="Services" href="../sample-page.html" data-toggle="dropdown"> Services </a></li>
+                    <li><a title="About Us" href="../sample-page.html">About Us</a></li>
+                    <li><a title="Blog" href="blog-achieve.html">Blog</a></li>
+                    <li><a title="FAQs" href="../sample-page.html">FAQs</a></li>
+                    <li><a title="Contact Us" href="../sample-page.html">Contact Us</a></li>
+                    <li><a title="Privacy Policy" href="../sample-page.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-overlay"></div>
+
             <div class="page-header-banner bagels-overlay phb-sin-blog-post">
                 <div class="phb-bg"></div>
                 <div class="container phb-container bagels-pos-relative">
@@ -223,5 +264,11 @@
             </div>
 
         </div><!--body-wrap-end-->
+
+        <script src="../lib/jquery.min.js"></script>
+        <script src="../lib/owl.carousel.min.js"></script>
+        <script src="../lib/aos.js"></script>
+        <script src="../script.js"></script>
+        
     </body>
 </html>

@@ -30,47 +30,38 @@ $(document).ready(function(){
             $('#site-header').removeClass('sticky');
         }
     });
+
+    // Mobile sidebar toggle
+    $(document).on('click', '.sidebar-toggler', function(e) {
+        e.preventDefault();
+        var sidebarId = $(this).data('sidebar');
+        $('#' + sidebarId).toggleClass('open');
+        $('.sidebar-overlay').toggle();
+    });
+
+    // Close sidebar when clicking on overlay
+    $(document).on('click', '.sidebar-overlay', function() {
+        $('.sidebar-nav').removeClass('open');
+        $('.sidebar-overlay').hide();
+    });
 });
 
-/**
-            <script type="speculationrules">
-                {
-                    "prefetch": [
-                        {
-                            "source": "document",
-                            "where": {
-                                "and": [
-                                    {
-                                        "href_matches": "\/*"
-                                    },
-                                    {
-                                        "not": {
-                                            "href_matches": [
-                                                "\/wp-*.php",
-                                                "\/wp-admin\/*",
-                                                "\/wp-content\/uploads\/*",
-                                                "\/wp-content\/*",
-                                                "\/wp-content\/plugins\/*",
-                                                "\/wp-content\/themes\/YuthLogistics\/*",
-                                                "\/*\\?(.+)"
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "not": {
-                                            "selector_matches": "a[rel~=\"nofollow\"]"
-                                        }
-                                    },
-                                    {
-                                        "not": {
-                                            "selector_matches": ".no-prefetch, .no-prefetch a"
-                                        }
-                                    }
-                                ]
-                            },
-                            "eagerness": "conservative"
-                        }
-                    ]
-                }</script>
 
-                */
+
+/*function toggleSidebar() {
+        $('.sidebar-toggler').click(function(e) {
+            var attr = $(this).attr('data-target');
+            var target_sidebar = $(this).attr('data-sidebar');
+            $(this).toggleClass('open');
+            if (!(typeof attr !== typeof undefined && attr !== !1)) {
+                e.preventDefault();
+                $('#' + target_sidebar).toggleClass('open');
+                $('.sidebar-overlay').fadeIn()
+            }
+        });
+        $('.sidebar-overlay').click(function() {
+            $('.sidebar-toggler').removeClass('open');
+            $('.sidebar-nav').removeClass('open');
+            $(this).fadeOut()
+        })
+    }*/
