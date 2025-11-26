@@ -1,6 +1,5 @@
 # Here is a a comprehensive CSS-to-HTML class mapping document showing what's used, what's unused, and what needs to be renamed for your WordPress conversion.
 
-# phase-1
 # Complete CSS-to-HTML Class Name Analysis & WordPress Conversion Guide
 
 ## 📊 SUMMARY

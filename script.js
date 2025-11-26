@@ -10,15 +10,9 @@ $(document).ready(function(){
         autoplayTimeout: 5000,
         smartSpeed: 800,
         responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:2
-            },
-            1000:{
-                items:3
-            }
+            0:{ items:1 },
+            600:{ items:2 },
+            1000:{ items:3 }
         }
     });
 
@@ -31,18 +25,20 @@ $(document).ready(function(){
         }
     });
 
-    // Mobile sidebar toggle
-    $(document).on('click', '.sidebar-toggler', function(e) {
+    // Mobile sidebar toggle - support both original and renamed classes
+    $(document).on('click', '.sidebar-toggler, .navbar-menu-toggle', function(e) {
         e.preventDefault();
-        var sidebarId = $(this).data('sidebar');
+        // if using data-sidebar attribute (original), use it; otherwise target #left-sidebar
+        var sidebarId = $(this).data('sidebar') || 'left-sidebar';
         $('#' + sidebarId).toggleClass('open');
-        $('.sidebar-overlay').toggle();
+        // overlay class in markup is .mobile-menu-overlay
+        $('.mobile-menu-overlay, .sidebar-overlay').toggle();
     });
 
     // Close sidebar when clicking on overlay
-    $(document).on('click', '.sidebar-overlay', function() {
-        $('.sidebar-nav').removeClass('open');
-        $('.sidebar-overlay').hide();
+    $(document).on('click', '.mobile-menu-overlay, .sidebar-overlay', function() {
+        $('.sidebar-nav, #left-sidebar').removeClass('open');
+        $('.mobile-menu-overlay, .sidebar-overlay').hide();
     });
 });
 
